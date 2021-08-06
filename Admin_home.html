@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Home</title>
+  <link rel="stylesheet" href="styles/AdminHomeStyle.css" type="text/css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+  <!-- Navigation-->
+  <nav>                  
+    <div class="logo">
+       EAT.LK
+    </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+    <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+       <li><a href="Landing_page.html">Home</a></li>
+       <li><a href="Restaurants.html">Restaurants</a></li>
+       <li><a href="Contact_us.html">Contact Us</a></li>
+    </ul>
+ </nav>               
+ <!-- end of navigation -->
+
+  <img src="images/admin.png" width="1500" height="1000" alt="logo" class="mainlogo">
+
+<p id="para">Manage with Ease</p>
+  <div class="buttoncontainer">
+    <div class="flexbox">
+      <a class="button1" id="verify">Verify</a>
+    </div>
+  </div>
+
+
+
+<!--Modal-->
+
+    <div id="myModal" class="Modal">
+      <div class="modalcontent">
+        <div class="section">
+        <span class="close">&times;</span>
+        </div>
+
+        <ul id="Verify_List">
+          <li>Restaurant</li>
+        </ul>
+        
+      </div>
+    </div>
+<!--End of modal-->
+
+<script src="scripts/Admin.js"></script>
+</body>
+</html>

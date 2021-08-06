@@ -1,0 +1,60 @@
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    font-size: 40px;
+  }
+
+
+  .container{
+    position: relative;
+    text-align: center;
+    color: white;
+
+  }
+
+  #coverpic{
+    width: 100%;
+
+  }
+
+
+  
+  .bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/coverpic.webp");
+    min-height: 75%;
+  }
+  
+  .menu {
+    display: none;
+  }
+
+#name{
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-weight: 800
+}
+
+.mainheading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100px;
+    transform: translate(-50%,-50%);
+}
+
+
+.menuitem{
+  padding-bottom: 50px;
+}
+
+
+
+.text{
+  font-size: 24px;
+  font-style: italic;
+ 
+}
+
+

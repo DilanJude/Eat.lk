@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                                                 <!-- Start of Head Section -->
+  <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/CustomerHomeStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=auto">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="scripts/Customer_profile.js"></script>
+
+ <!--Favicon-->
+<!--Favicon end-->
+   
+</head>                                                   <!-- End of Head Section -->
+<body onload="loadprofile()">
+
+  <nav>
+    <div class="logo">
+       EAT.LK
+    </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+    <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+       <li><a href="Landing_page.html">Home</a></li>
+       <li><a href="Restaurants.html">Restaurants</a></li>
+       <li><a href="Contact_us.html">Contact Us</a></li>
+    </ul>
+ </nav>
+
+  <img src="images/customer.png" width="1500" height="1000" alt="logo" class="mainlogo">
+
+
+
+  <div class="container">
+    <div class="avatar-flip">
+     <img id="usertype" src= "images/neutral.jpg" height="150" width="150"> 
+      <img src="images/logo.png" height="150" width="150">
+    </div>
+    <h2 id="name">Create your Profile</h2>
+    <h3 class="heading">Information</h3>
+  
+    <h4 class="subheading">Email</h4>
+    <h4 class="data" id="email">no data</h6>
+  
+    <h4 class="subheading">Adress</h4>
+    <h4 class="data" id="address">No data</h4>
+  
+    <h4 class="subheading">DOB</h4>
+    <h4 class="data" id="dob">No data</h4>
+  
+    <h4 class="subheading">Gender</h4>
+    <h4 class="data" id="gender">No data</h4>
+  
+    <h4 class="subheading">Number</h4>
+    <h4 class="data" id="number">No data</h4>
+  
+  
+  </div>
+
+  <table class="align">
+  <div class="button">
+    <th><a class="button1" href="Customer_Profile_Create.html">Create Profile</a></th>
+    <th><a class="button2" href="Customer_Profile_Create.html">Update Profile</a></th>
+  </div>
+  </table>
+  
+  
+
+    <footer class="footer">                                      <!-- Footer of Page--> 
+      <br>
+      <p>Eat.lk 2021 © All Right Reserved. Designed by Group 3<br>
+      <a href="https://www.w3schools.com/">For More Info</a></p>
+      <br>
+    </footer>                                                    <!--End of Footer-->
+</body>
