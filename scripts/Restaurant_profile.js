@@ -164,3 +164,134 @@ function getMenu(){
 }
 
 
+
+
+
+function UpdateProfileLoad(){
+    let useremail = sessionStorage.getItem("currentuser");
+
+    $.ajax({
+        type : "GET",
+        url : "http://localhost:8085/api/getRprofile/" + useremail,
+        headers : 
+        {
+            "Content-Type" : "application/json"
+        },
+        success:function(response){
+
+
+            if(useremail != null){
+                document.getElementById("name").value = response.name;
+                document.getElementById("description").value = response.description;
+                document.getElementById("type").value = response.type;
+                document.getElementById("address").value = response.address;
+                document.getElementById("contactno").value = response.number;
+                document.getElementById("cuisine").value = response.cuisine;
+                document.getElementById("website").value= response.website;
+
+
+            }
+            
+            else{
+                document.getElementById("name").innerHTML = "Please create your profile";
+            }
+
+
+
+        },
+        error: function(error){
+            console.log(error);
+            alert("something went wrong when loading your profile");
+        }
+
+
+
+    });
+}
+
+
+
+
+
+
+var container = document.getElementById("form_wrapper");
+var btn = document.getElementById("update");
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function(){
+    container.style.display = "block";
+    UpdateProfileLoad();
+}
+
+span.onclick = function(){
+    container.style.display = "none";
+}
+
+
+function UpdateRestaurantProfile(){
+    let userdata = 
+    {
+        name: document.getElementById("name").value,
+        email : sessionStorage.getItem("currentuser"),
+        address : document.getElementById("address").value,
+        description : document.getElementById("description").value,
+        cuisine : document.getElementById("cuisine").value,
+        type : document.getElementById("type").value,
+        number : document.getElementById("contactno").value,
+        website : document.getElementById("website").value
+    }
+
+    $.ajax({
+        type : "PUT",
+        url : "http://localhost:8085/api/updateRestaurantProfile",
+        headers:
+        {
+            "Content-Type" : "application/json"
+        },
+        data: JSON.stringify(userdata),
+        success: function(response){
+            alert("Your profile has been successfully updated")
+        },
+        error: function(error){
+            console.log(error)
+            alert("An error has occured while updating your profile")
+        }
+    })
+}
+
+
+
+//Function for the greeting of user
+
+function greeting(){
+    let useremail = sessionStorage.getItem("currentuser");
+
+    $.ajax({
+        type : "GET",
+        url : "http://localhost:8085/api/getRprofile/" + useremail,
+        headers : 
+        {
+            "Content-Type" : "application/json"
+        },
+        success:function(response){
+            document.getElementById("UserName").innerHTML = response.name;
+
+            sessionStorage.setItem("currentRestaurant", response.name)
+        },
+        error:function(error){
+            console.log(error);
+            alert("something went wrong when accessing your profile")
+        }
+    })
+}
+
+
+//Function for veiwing comments on profile 
+var btn3 = document.getElementById("viewComments");
+
+
+btn3.onclick = function(){
+    window.location.href = "Comments.html?restaurant="+ sessionStorage.getItem("currentRestaurant");
+}
+

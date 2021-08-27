@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=auto">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="scripts/Customer_profile.js"></script>
 
  <!--Favicon-->
 <!--Favicon end-->
    
 </head>                                                   <!-- End of Head Section -->
-<body onload="loadprofile()">
+<body onload="loadprofile(); greeting();">
 
   <nav>
     <div class="logo">
@@ -30,8 +29,13 @@
     </ul>
  </nav>
 
-  <img src="images/customer.png" width="1500" height="1000" alt="logo" class="mainlogo">
-
+ <div class="greeting">
+  <img src="images/background.png" width="1500" height="1000" alt="logo" id="mainlogo">
+  <div class="caption">
+    <p>Welcome</p>
+    <p id="UserName">Customer</p>
+  </div>
+</div>
 
 
   <div class="container">
@@ -63,10 +67,91 @@
   <table class="align">
   <div class="button">
     <th><a class="button1" href="Customer_Profile_Create.html">Create Profile</a></th>
-    <th><a class="button2" href="Customer_Profile_Create.html">Update Profile</a></th>
+    <th><a class="button2" id="update">Update Profile</a></th>
   </div>
   </table>
-  
+
+
+ 
+  <div class="form_wrapper" id="form_wrapper">
+    <div class="form_container">
+      <span class="close">&times;</span>
+
+        <div class="title_container">
+            <h2>Update your Profile</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="">
+
+                <div class="input_field">
+                    <input type="text" name="name" placeholder="Enter your Name" required id="updatename"/>
+                </div>
+
+                <div class="input_field">
+                    <input type="text" name="DOB" placeholder="DOB - dd/mm/yyyy" required id="updateDOB"/>
+                </div>
+
+                <div class="input_field">
+                    <input type="text" name="adress" placeholder="Address" required id="updateaddress"/>
+                </div>
+
+                <div class="input_field">
+                    <input type="text" name="number" placeholder="Mobile Number" required id="updatenumber"/>
+                </div>
+
+                <div class="input_field select_option">
+                    <select id="updategender" required>
+                        <option>Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</oprion>
+                    </select>
+                </div>
+            </div>
+
+            <input class="button" type="button" value="Update" onclick="UpdateProfile()"/>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
     <footer class="footer">                                      <!-- Footer of Page--> 
@@ -75,4 +160,9 @@
       <a href="https://www.w3schools.com/">For More Info</a></p>
       <br>
     </footer>                                                    <!--End of Footer-->
+
+
+
+    <script src="scripts/Customer_profile.js"></script>
 </body>
+</html>

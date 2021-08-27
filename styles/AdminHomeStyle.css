@@ -163,11 +163,39 @@ a.button1{
   font-size: 25px;
 }
 
+a.button2{
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid white;
+  margin-top: 0;
+  margin: 0 15%;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  transition: all 0.2s;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+
+
+
 a.button1:hover{
   background-color: #dd0949;
   color: black;
   border: 0.1em solid #000000;
 }
+
+a.button2:hover{
+  background-color: #dd0949;
+  color: black;
+  border: 0.1em solid #000000;
+}
+
 /*end of buttons*/
 
   /*flex row*/
@@ -178,7 +206,6 @@ a.button1:hover{
     justify-content: left;
     width: 100%;
 }
-
 /*end of flex row*/
 
 /*flex columns*/
@@ -189,7 +216,7 @@ a.button1:hover{
     flex-wrap: wrap;
     width: 25%;
     margin-left: 20%;
-    border-right: 1px solid black;
+    border-right: 1px solid rgb(255, 255, 255);
 }
 
 .flex2{
@@ -245,6 +272,27 @@ a.button1:hover{
 }
 
 
+.section .close2{
+  float: right;
+}
+
+.close2{
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
 #Verify_Link{
   list-style-type: none;
   padding: 10px;
@@ -268,6 +316,50 @@ a.button1:hover{
   padding-right: 20px;
   font-size: 20px;
 }
+
+
+
+
+#Customer_List{
+  list-style-type: none;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+#Customer_List li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+
+
+#Restaurant_List{
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+#Restaurant_List li a{
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#Restaurant_List li a:hover:not(.header) {
+  background-color: #eee;
+}
+
 /*end of modal and content*/
 
 

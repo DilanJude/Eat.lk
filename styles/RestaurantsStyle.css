@@ -1,5 +1,8 @@
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+}
 /*nav bar*/
   
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -221,32 +224,6 @@ img {
   }
 }
 
-/*Styling for the Table in Descriptions */
-
-table {
-  border-collapse: collapse;
-  width: 100%;  
-}
-
-table td, table th{
-  border: 3px solid #1B4A56;
-  text-align:center;
-  align-items: center;
-  padding: 8px;
-}
-table tr:hover {
-  background-color:whitesmoke;
-}
-
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align:center;
-  background-color:#000000;
-  color: white;
-}
-
-/* End of styling for tables */
 
 
 /* additional part 1*/
@@ -381,6 +358,131 @@ a.button2{
 
 
 
+/* Types of tea section*/
+h2.types{
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+#teasquares {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content : space-between;
+  background-color: #1b1b1b;
+}
+#teasquares .box {
+  margin: .8em .2em ;
+  width: calc(33% - .4em);
+  box-sizing : border-box;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba (0,0,0,0.22);
+  background-color : #ffffff;
+}
+#teasquares h3, #teasquares p{
+  width:90%;
+  padding :0;
+  margin:1em auto;
+}
+.button {
+  padding:.8em;
+  background-color :#37A6A0;
+  color: rgb(17,17,17);
+  text-transform:uppercase;
+  text-decoration: none;
+  display:block;
+  margin: .8em auto .8em 0;
+  width:100px;
+}
+img{
+  width:500;
+  height:auto;
+  display:block;
+  padding:0;
+  margin:0 auto;
+}
+/*Types of tea section styling end */
+
+
+
+
+/* profile card styling */
+
+.a{
+  text-decoration: none;
+}
+
+#testimonials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.testimonial-box-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #1b1b1b;
+}
+
+.testimonial-box{
+  width: 500px;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.profile-img{
+  width: 200px;
+  height: 200px;
+  border: 50%;
+  overflow: hidden;
+  margin-right: 0;
+}
+
+.profile-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+}
+
+.name-restaurant strong{
+  color: #3d3d3d;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin-left: 20px;
+}
+
+.box-top{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.subheading{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+
 
 
 
@@ -404,10 +506,20 @@ a.button2{
 .footer {
   text-align: center;
   padding: 3px;
-  background-color:black;
-  color: #ed6f32;  
+  background-color:#000000;
+  color: rgb(255, 255, 255);  
   position: absolute;
   bottom: 100;
   width: 100%;
 }
 /* End of Footer */
+
+
+
+
+
+
+
+
+
+

@@ -71,3 +71,80 @@ function loadprofile(){
 
     })
 }
+
+
+
+var container = document.getElementById("form_wrapper");
+var btn = document.getElementById("update");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function(){
+    container.style.display = "block";
+    document.getElementById("updatename").value = document.getElementById("name").innerHTML; 
+    document.getElementById("updateaddress").value = document.getElementById("address").innerHTML; 
+    document.getElementById("updateDOB").value = document.getElementById("dob").innerHTML; 
+    document.getElementById("updatenumber").value = document.getElementById("number").innerHTML;
+    document.getElementById("updategender").value = document.getElementById("gender").innerHTML; 
+}
+
+span.onclick = function(){
+    container.style.display = "none";
+}
+
+
+function UpdateProfile(){
+    let userdata =
+    {
+        name: document.getElementById("updatename").value,
+        email: sessionStorage.getItem("currentuser"),
+        dob: document.getElementById("updateDOB").value,
+        address: document.getElementById("updateaddress").value,
+        number: document.getElementById("updatenumber").value,
+        gender: document.getElementById("updategender").value
+    }
+
+    $.ajax({
+        type: "PUT",
+        url: "http://localhost:8085/api/updateProfile",
+        headers:
+        {
+            "Content-Type" : "application/json"
+        },
+        data: JSON.stringify(userdata),
+        success: function(response){
+            alert("Your profile has been successfully updated")
+        },
+        error: function(error){
+            console.log(error);
+            alert("An error has occured while updating your profile")
+        }
+    })
+}
+
+//Greeting for customer
+function greeting(){
+    let useremail = sessionStorage.getItem("currentuser");
+
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8085/api/getprofile/" + useremail,
+        headers:
+        {
+            "Content-Type" : "application/json"
+        },
+        success:function(response){
+            if(response.email == null){
+                document.getElementById("UserName").innerHTML = "Customer";
+            }
+            else{
+              document.getElementById("UserName").innerHTML = response.name;
+            }
+        },
+
+        error:function(error){
+            console.log(error);
+            alert("something went when accessing your profile");
+        }
+    })
+}
+
